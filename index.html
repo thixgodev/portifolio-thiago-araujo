@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Thiago Araujo — Diretor Criativo em São Paulo</title>
+<meta name="description" content="Thiago Araujo é Diretor Criativo em São Paulo. Direção criativa, direção de arte, branding, campanhas e experiências digitais.">
+<meta property="og:title" content="Thiago Araujo — Diretor Criativo">
+<meta property="og:description" content="Direção criativa, direção de arte, branding, campanhas e experiências digitais. São Paulo, Brasil.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/stayme/hero.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="./">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#050a10;color:#f4f3ef;}
+body{font-family:"Helvetica Neue","Inter Tight",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;}
+a{color:inherit;text-decoration:none;}
+a:hover{color:#ffffff;}
+::selection{background:#f4f3ef;color:#000;}
+html[data-mode="digital"] ::selection{background:#0a0a0a;color:#f4f3ef;}
+img,video{display:block;}
+@keyframes caseCue{0%{transform:translateY(-100%)}55%,100%{transform:translateY(260%)}}
+@keyframes heroLogos{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+</style>
+</helmet>
+<div data-portfolio-root style="--bg:#050a10;--bgimg:radial-gradient(55% 45% at 12% 30%,rgba(22,128,214,.13),transparent 72%),radial-gradient(50% 40% at 88% 78%,rgba(22,128,214,.10),transparent 72%);--logo:none;background-image:var(--bgimg);background-size:100% 200svh;background-repeat:repeat-y;--ink:#f4f3ef;--ink2:#dcdbd6;--mute:#8a8a86;--panel:#0b121b;--line:rgba(244,243,239,.18);--line2:rgba(244,243,239,.14);--glow:drop-shadow(0 0 36px rgba(0,0,0,.7));position:relative;min-height:100svh;background-color:var(--bg);color:var(--ink);font-family:'Helvetica Neue','Inter Tight',Helvetica,Arial,sans-serif;overflow-x:clip;">
+
+  <header data-header style="position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:flex-start;padding:clamp(16px,2.4vw,44px);mix-blend-mode:difference;pointer-events:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;--hdr:#f4f3ef;color:var(--hdr);">
+    <div style="pointer-events:auto;white-space:nowrap;">
+      <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+        <a href="#" onClick="{{ goLanding }}" aria-label="Thiago Araujo — início" style="display:inline-block;color:var(--hdr);transition:color 300ms cubic-bezier(.16,1,.3,1);" style-focus="outline:1px solid var(--hdr);outline-offset:6px;">Thiago Araujo</a>
+      </sc-if>
+      <sc-if value="{{ isCase }}" hint-placeholder-val="{{ false }}">
+        <a data-back href="{{ backHref }}" onClick="{{ goHome }}" aria-label="Voltar aos projetos" style="display:inline-flex;align-items:center;gap:12px;color:var(--hdr);transition:color 300ms cubic-bezier(.16,1,.3,1),transform 400ms cubic-bezier(.16,1,.3,1);" style-hover="transform:translateX(-5px)" style-focus="outline:1px solid var(--hdr);outline-offset:6px;"><svg aria-hidden="true" width="24" height="10" style="display:block;flex:0 0 auto;overflow:visible;"><path d="M23 5H1.5M5.5 1 1.5 5l4 4" style="fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;"></path></svg><span>Voltar</span></a>
+      </sc-if>
+    </div>
+    <nav aria-label="Principal" style="display:flex;gap:clamp(16px,2.2vw,36px);pointer-events:auto;white-space:nowrap;">
+      <a href="#projetos" data-nav="projetos" onClick="{{ onNav }}" style="color:var(--hdr);opacity:1;transition:opacity 200ms cubic-bezier(.16,1,.3,1),color 300ms cubic-bezier(.16,1,.3,1);" style-hover="opacity:.5" style-focus="outline:1px solid var(--hdr);outline-offset:6px;">Projetos</a>
+      <a href="#sobre" data-nav="sobre" onClick="{{ onNav }}" style="color:var(--hdr);opacity:1;transition:opacity 200ms cubic-bezier(.16,1,.3,1),color 300ms cubic-bezier(.16,1,.3,1);" style-hover="opacity:.5" style-focus="outline:1px solid var(--hdr);outline-offset:6px;">Sobre</a>
+      <a href="#clientes" data-nav="clientes" onClick="{{ onNav }}" style="color:var(--hdr);opacity:1;transition:opacity 200ms cubic-bezier(.16,1,.3,1),color 300ms cubic-bezier(.16,1,.3,1);" style-hover="opacity:.5" style-focus="outline:1px solid var(--hdr);outline-offset:6px;">Marcas</a>
+      <a href="#contato" data-nav="contato" onClick="{{ onNav }}" style="color:var(--hdr);opacity:1;transition:opacity 200ms cubic-bezier(.16,1,.3,1),color 300ms cubic-bezier(.16,1,.3,1);" style-hover="opacity:.5" style-focus="outline:1px solid var(--hdr);outline-offset:6px;">Contato</a>
+    </nav>
+  </header>
+
+  <sc-if value="{{ notMobile }}" hint-placeholder-val="{{ true }}">
+    <div data-mode-toggle role="tablist" aria-label="Tipo de trabalho" aria-hidden="true" style="position:fixed;left:50%;top:max(8px,calc(clamp(16px,2.4vw,44px) - 13px));transform:translate(-50%,-10px);z-index:70;display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 300ms cubic-bezier(.16,1,.3,1),transform 300ms cubic-bezier(.16,1,.3,1),background 400ms cubic-bezier(.16,1,.3,1),border-color 400ms cubic-bezier(.16,1,.3,1);">
+      <a href="#marcas" role="tab" aria-selected="{{ isBrand }}" onClick="{{ setBrand }}" style="display:inline-flex;align-items:center;height:34px;padding:0 18px;border-radius:999px;color:{{ brandFg }};background:{{ brandBg }};transition:background 300ms cubic-bezier(.16,1,.3,1),color 300ms cubic-bezier(.16,1,.3,1);" style-focus="outline:1px solid var(--ink);outline-offset:3px;">Marcas</a>
+      <a href="#digital" role="tab" aria-selected="{{ isDigital }}" onClick="{{ setDigital }}" style="display:inline-flex;align-items:center;height:34px;padding:0 18px;border-radius:999px;color:{{ digitalFg }};background:{{ digitalBg }};transition:background 300ms cubic-bezier(.16,1,.3,1),color 300ms cubic-bezier(.16,1,.3,1);" style-focus="outline:1px solid var(--ink);outline-offset:3px;">Produtos digitais</a>
+    </div>
+  </sc-if>
+  <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+    <div data-mode-toggle role="tablist" aria-label="Tipo de trabalho" aria-hidden="true" style="position:fixed;left:50%;top:calc(clamp(16px,2.4vw,44px) + 30px);transform:translate(-50%,-10px);z-index:70;display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 300ms cubic-bezier(.16,1,.3,1),transform 300ms cubic-bezier(.16,1,.3,1),background 400ms cubic-bezier(.16,1,.3,1),border-color 400ms cubic-bezier(.16,1,.3,1);">
+      <a href="#marcas" role="tab" aria-selected="{{ isBrand }}" onClick="{{ setBrand }}" style="display:inline-flex;align-items:center;height:40px;padding:0 18px;border-radius:999px;color:{{ brandFg }};background:{{ brandBg }};transition:background 300ms cubic-bezier(.16,1,.3,1),color 300ms cubic-bezier(.16,1,.3,1);" style-focus="outline:1px solid var(--ink);outline-offset:3px;">Marcas</a>
+      <a href="#digital" role="tab" aria-selected="{{ isDigital }}" onClick="{{ setDigital }}" style="display:inline-flex;align-items:center;height:40px;padding:0 18px;border-radius:999px;color:{{ digitalFg }};background:{{ digitalBg }};transition:background 300ms cubic-bezier(.16,1,.3,1),color 300ms cubic-bezier(.16,1,.3,1);" style-focus="outline:1px solid var(--ink);outline-offset:3px;">Produtos digitais</a>
+    </div>
+  </sc-if>
+
+  <div data-cursor aria-hidden="true" style="position:fixed;left:0;top:0;z-index:95;pointer-events:none;will-change:transform;transform:translate3d(-200px,-200px,0);">
+    <div data-cursor-in style="width:88px;height:88px;margin:-44px 0 0 -44px;border-radius:50%;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;text-align:center;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;line-height:1.35;opacity:0;transform:scale(.4);transition:opacity 250ms cubic-bezier(.16,1,.3,1),transform 400ms cubic-bezier(.16,1,.3,1);">Ver<br>projeto ↗</div>
+  </div>
+
+  <div data-veil aria-hidden="true" style="position:fixed;inset:0;z-index:85;background:var(--bg);pointer-events:none;opacity:0;transition:opacity 400ms cubic-bezier(.77,0,.18,1);"></div>
+
+  <sc-if value="{{ hasTransition }}" hint-placeholder-val="{{ false }}">
+    <div data-tr aria-hidden="true" style="position:fixed;z-index:90;overflow:hidden;background:var(--panel);left:{{ trLeft }};top:{{ trTop }};width:{{ trW }};height:{{ trH }};clip-path:{{ trClip }};transition:left 700ms cubic-bezier(.77,0,.18,1),top 700ms cubic-bezier(.77,0,.18,1),width 700ms cubic-bezier(.77,0,.18,1),height 700ms cubic-bezier(.77,0,.18,1),clip-path 650ms cubic-bezier(.77,0,.18,1);">
+      <img src="{{ trSrc }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <main data-home data-screen-label="Home">
+
+      <div data-exhibit id="projetos" style="position:relative;height:{{ exhibitH }};">
+        <div data-stage style="position:sticky;top:0;height:100svh;overflow:hidden;perspective:1400px;perspective-origin:50% 50%;">
+
+          <sc-if value="{{ showHeroBg }}" hint-placeholder-val="{{ false }}">
+            <div data-hero-bg style="position:absolute;inset:0;z-index:1;opacity:0;pointer-events:none;will-change:transform,opacity;">
+              <img src="{{ heroBg }}" alt="{{ heroBgAlt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;">
+            </div>
+          </sc-if>
+
+          <div data-plane="0" style="position:absolute;left:0;right:0;top:calc(50% - 32svh);height:64svh;z-index:10;pointer-events:none;will-change:transform;transform-origin:50% 50%;">
+            <div data-row-line="0" style="position:absolute;left:clamp(16px,2.4vw,44px);right:clamp(16px,2.4vw,44px);top:0;display:flex;justify-content:space-between;align-items:baseline;gap:clamp(16px,2.4vw,44px);padding-top:12px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;opacity:0;">
+              <span style="display:flex;align-items:baseline;gap:14px;white-space:nowrap;"><span style="font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;color:var(--mute);">{{ first.num }}</span><span>{{ first.title }}</span></span>
+              <span style="display:flex;align-items:baseline;justify-content:flex-end;gap:14px;text-align:right;min-width:0;"><span style="color:var(--mute);">{{ first.line }}</span><span style="font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;white-space:nowrap;">{{ first.year }}</span></span>
+            </div>
+            <h2 data-row-title="0" style="position:absolute;inset:0;margin:0;display:flex;align-items:center;justify-content:center;white-space:nowrap;z-index:1;font-weight:500;letter-spacing:-.04em;line-height:1;text-transform:uppercase;pointer-events:none;opacity:0;will-change:transform,opacity;"><span data-fit-title style="display:inline-block;">{{ first.title }}</span></h2>
+            <sc-for list="{{ stack }}" as="p" hint-placeholder-count="1">
+              <a data-stack="{{ $index }}" href="{{ p.href }}" onClick="{{ p.open }}" onMouseEnter="{{ cursorOn }}" onMouseLeave="{{ cursorOff }}" aria-label="{{ p.aria }}" style="position:absolute;left:50%;top:50%;z-index:2;width:min(84vw,40svh);aspect-ratio:4/5;display:block;transform:translate(-50%,-50%) scale(.5);opacity:0;pointer-events:none;will-change:transform,opacity,filter;" style-focus="outline:1px solid var(--ink);outline-offset:6px;">
+                <span style="position:absolute;inset:0;overflow:hidden;background:var(--panel);display:block;">
+                  <sc-if value="{{ p.isVideo }}" hint-placeholder-val="{{ false }}">
+                    <video data-cover="1" data-lazy-src="{{ p.cover }}" data-start="{{ p.coverStart }}" muted="{{ true }}" playsinline="true" preload="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 900ms cubic-bezier(.16,1,.3,1);will-change:transform;" style-hover="transform:scale(1.03)"></video>
+                  </sc-if>
+                  <sc-if value="{{ p.isImage }}" hint-placeholder-val="{{ true }}">
+                    <img src="{{ p.cover }}" alt="{{ p.coverAlt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 900ms cubic-bezier(.16,1,.3,1);will-change:transform;" style-hover="transform:scale(1.03)">
+                  </sc-if>
+                </span>
+              </a>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ showHero }}" hint-placeholder-val="{{ true }}">
+          <h1 data-hero-text style="position:absolute;left:clamp(16px,2.4vw,44px);right:clamp(16px,2.4vw,44px);top:clamp(12svh,calc(50svh - 1.05em - (100svh - 100vw) * 10),calc(50svh - 1.05em));margin:0;font-size:clamp(78px,min(12.5vw,18svh),280px);line-height:1.1;letter-spacing:-.045em;font-weight:500;text-transform:uppercase;pointer-events:none;">
+            <span data-hero-line="0" style="position:relative;z-index:3;display:block;will-change:transform,opacity;opacity:0;">Thiago</span>
+            <span data-hero-line="1" style="position:relative;z-index:3;display:block;text-align:right;will-change:transform,opacity;opacity:0;">Araujo.</span>
+          </h1>
+
+          <div data-hero-meta style="position:absolute;left:clamp(16px,2.4vw,44px);bottom:clamp(16px,2.4vw,44px);z-index:12;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.6;white-space:nowrap;opacity:0;">
+            <div>Diretor Criativo</div>
+            <div style="color:var(--mute);">São Paulo, Brasil</div>
+          </div>
+          <div data-hero-meta style="position:absolute;right:clamp(16px,2.4vw,44px);bottom:clamp(16px,2.4vw,44px);z-index:12;text-align:right;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.6;color:var(--mute);white-space:nowrap;opacity:0;">
+            <div>Direção Criativa</div>
+            <div>Direção de Arte</div>
+            <div>Design</div>
+          </div>
+          <sc-if value="{{ notMobile }}" hint-placeholder-val="{{ true }}">
+            <a data-hero-meta href="#projetos" data-nav="projetos" onClick="{{ onNav }}" style="position:absolute;left:50%;bottom:clamp(16px,2.4vw,44px);transform:translateX(-50%);z-index:12;display:flex;align-items:center;gap:10px;color:var(--ink);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.6;white-space:nowrap;opacity:0;transition:color 200ms cubic-bezier(.16,1,.3,1);" style-hover="color:var(--mute)" style-focus="outline:1px solid var(--ink);outline-offset:6px;">Ver projetos <span aria-hidden="true">↓</span></a>
+          </sc-if>
+          </sc-if>
+        </div>
+      </div>
+
+      <div data-drum style="position:relative;margin-top:-18svh;">
+        <sc-for list="{{ rows }}" as="p" hint-placeholder-count="3">
+          <section data-row="{{ p.idx }}" aria-label="{{ p.title }}" style="position:relative;height:64svh;perspective:1400px;perspective-origin:50% 50%;">
+            <div data-plane="{{ p.idx }}" style="position:absolute;inset:0;pointer-events:none;will-change:transform,opacity;transform-origin:50% 50%;">
+              <div data-row-line="{{ p.idx }}" style="position:absolute;left:clamp(16px,2.4vw,44px);right:clamp(16px,2.4vw,44px);top:0;display:flex;justify-content:space-between;align-items:baseline;gap:clamp(16px,2.4vw,44px);padding-top:12px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;">
+                <span style="display:flex;align-items:baseline;gap:14px;white-space:nowrap;"><span style="font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;color:var(--mute);">{{ p.num }}</span><span>{{ p.title }}</span></span>
+                <span style="display:flex;align-items:baseline;justify-content:flex-end;gap:14px;text-align:right;min-width:0;"><span style="color:var(--mute);">{{ p.line }}</span><span style="font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;white-space:nowrap;">{{ p.year }}</span></span>
+              </div>
+              <h2 data-row-title="{{ p.idx }}" style="position:absolute;inset:0;margin:0;display:flex;align-items:center;justify-content:center;white-space:nowrap;z-index:1;font-weight:500;letter-spacing:-.04em;line-height:1;text-transform:uppercase;pointer-events:none;will-change:transform,opacity;"><span data-fit-title style="display:inline-block;">{{ p.title }}</span></h2>
+              <a data-row-media="{{ p.idx }}" href="{{ p.href }}" onClick="{{ p.open }}" onMouseEnter="{{ cursorOn }}" onMouseLeave="{{ cursorOff }}" aria-label="{{ p.aria }}" style="position:absolute;left:50%;top:50%;z-index:2;display:block;width:min(84vw,40svh);aspect-ratio:4/5;transform:translate(-50%,-50%);overflow:hidden;background:var(--panel);pointer-events:auto;will-change:filter;" style-focus="outline:1px solid var(--ink);outline-offset:6px;">
+                <sc-if value="{{ p.isVideo }}" hint-placeholder-val="{{ false }}">
+                  <video data-cover="1" data-lazy-src="{{ p.cover }}" data-start="{{ p.coverStart }}" muted="{{ true }}" playsinline="true" preload="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 900ms cubic-bezier(.16,1,.3,1);will-change:transform;" style-hover="transform:scale(1.03)"></video>
+                </sc-if>
+                <sc-if value="{{ p.isImage }}" hint-placeholder-val="{{ true }}">
+                  <img src="{{ p.cover }}" alt="{{ p.coverAlt }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 900ms cubic-bezier(.16,1,.3,1);will-change:transform;" style-hover="transform:scale(1.03)">
+                </sc-if>
+              </a>
+            </div>
+          </section>
+        </sc-for>
+      </div>
+
+      <section id="sobre" aria-labelledby="sobre-h" style="position:relative;padding:calc(clamp(16px,2.4vw,44px) * 4) clamp(16px,2.4vw,44px) calc(clamp(16px,2.4vw,44px) * 3);border-top:1px solid var(--line2);">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:clamp(16px,2.4vw,44px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;">
+          <span id="sobre-h" style="color:var(--mute);">Sobre</span>
+          <div style="display:flex;flex-wrap:wrap;gap:12px 32px;">
+            <span>{{ siteName }}</span>
+            <span style="color:var(--mute);">{{ siteRole }}</span>
+          </div>
+        </div>
+        <p style="margin:12vh 0 0 clamp(0px,calc(25% - 80px),340px);font-size:clamp(26px,3vw,56px);line-height:1.1;letter-spacing:-.025em;font-weight:400;max-width:24ch;text-wrap:pretty;">{{ bio }}</p>
+      </section>
+
+      <section id="clientes" aria-labelledby="clientes-h" style="position:relative;padding:calc(clamp(16px,2.4vw,44px) * 4) 0 calc(clamp(16px,2.4vw,44px) * 4);border-top:1px solid var(--line2);overflow:hidden;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:clamp(16px,2.4vw,44px);padding:0 clamp(16px,2.4vw,44px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;">
+          <span id="clientes-h" style="color:var(--mute);">Marcas</span>
+          <span style="color:var(--mute);text-align:right;">Com quem já trabalhei, direta ou indiretamente</span>
+        </div>
+        <div data-logo-belt style="margin-top:clamp(48px,9vh,120px);display:flex;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);">
+          <div data-logo-track style="display:flex;align-items:center;flex:0 0 auto;will-change:transform;animation:heroLogos 90s linear infinite;">
+            <sc-for list="{{ logoLoop }}" as="lg" hint-placeholder-count="16">
+              <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;margin-right:clamp(48px,6.5vw,128px);color:var(--ink);">
+                <sc-if value="{{ lg.isImg }}" hint-placeholder-val="{{ true }}"><img src="{{ lg.src }}" alt="{{ lg.name }}" loading="lazy" decoding="async" style="display:block;height:{{ lg.h }};width:auto;max-width:min(70vw,420px);object-fit:contain;filter:var(--logo);"></sc-if>
+                <sc-if value="{{ lg.isText }}" hint-placeholder-val="{{ false }}"><span style="display:block;font-size:{{ lg.fs }};line-height:1;letter-spacing:-.02em;text-transform:uppercase;font-weight:500;white-space:nowrap;">{{ lg.text }}</span></sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" aria-labelledby="contato-h" style="position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:calc(clamp(16px,2.4vw,44px) * 4) clamp(16px,2.4vw,44px) clamp(16px,2.4vw,44px);border-top:1px solid var(--line2);">
+        <div>
+          <div id="contato-h" style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">Tem uma ideia?</div>
+          <h2 style="margin:.35em 0 0;font-size:clamp(48px,11.5vw,250px);line-height:.86;letter-spacing:-.045em;font-weight:500;text-transform:uppercase;">Vamos<br>conversar?</h2>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:clamp(16px,2.4vw,44px);margin-top:12vh;">
+          <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,56px);font-size:clamp(16px,1.3vw,20px);letter-spacing:-.01em;">
+            <a href="{{ emailHref }}" style="white-space:nowrap;transition:opacity 200ms cubic-bezier(.16,1,.3,1);" style-hover="opacity:.55" style-focus="outline:1px solid var(--ink);outline-offset:6px;">E-mail ↗</a>
+            <a href="{{ linkedinHref }}" target="_blank" rel="noreferrer" style="white-space:nowrap;transition:opacity 200ms cubic-bezier(.16,1,.3,1);" style-hover="opacity:.55" style-focus="outline:1px solid var(--ink);outline-offset:6px;">LinkedIn ↗</a>
+            <a href="{{ instagramHref }}" target="_blank" rel="noreferrer" style="white-space:nowrap;transition:opacity 200ms cubic-bezier(.16,1,.3,1);" style-hover="opacity:.55" style-focus="outline:1px solid var(--ink);outline-offset:6px;">Instagram ↗</a>
+          </div>
+          <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);white-space:nowrap;">{{ siteLocation }}.</span>
+        </div>
+      </section>
+
+      <footer style="padding:calc(clamp(16px,2.4vw,44px) * 2) clamp(16px,2.4vw,44px) clamp(16px,2.4vw,44px);border-top:1px solid var(--line2);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:clamp(16px,2.4vw,44px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.7;">
+        <div><div>{{ siteName }}</div><div style="color:var(--mute);">{{ siteRole }}</div></div>
+        <div style="color:var(--mute);"><div>{{ siteCity }}</div><div>{{ siteCountry }}</div></div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;">
+          <a href="{{ instagramHref }}" target="_blank" rel="noreferrer" style-hover="color:var(--mute)">Instagram</a>
+          <a href="{{ linkedinHref }}" target="_blank" rel="noreferrer" style-hover="color:var(--mute)">LinkedIn</a>
+          <a href="{{ emailHref }}" style-hover="color:var(--mute)">E-mail</a>
+        </div>
+        <div style="color:var(--mute);text-align:right;font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;">© {{ currentYear }}</div>
+      </footer>
+    </main>
+  </sc-if>
+
+  <sc-if value="{{ isCase }}" hint-placeholder-val="{{ false }}">
+    <main data-case data-screen-label="Case: {{ cs.title }}">
+      <div data-case-hero style="position:relative;--pbg:{{ cs.palBg }};--pink:{{ cs.palInk }};--pink2:{{ cs.palInk2 }};--pmute:{{ cs.palMute }};--pline:{{ cs.palLine }};color:var(--pink);">
+        <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;bottom:calc(min(100svh,max(56.25vw,60svh)) / 2);background:var(--pbg);"></div>
+        <article data-case-hero-text aria-labelledby="case-h" style="position:relative;box-sizing:border-box;min-height:88svh;display:flex;flex-direction:column;padding:calc(clamp(16px,2.4vw,44px) * 2 + 72px) clamp(16px,2.4vw,44px) clamp(24px,5svh,56px);">
+          <div style="display:flex;justify-content:space-between;gap:clamp(16px,2.4vw,44px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--pmute);">
+            <span style="font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;white-space:nowrap;">Projeto {{ cs.num }} / {{ count }}</span>
+            <span style="text-align:right;">{{ cs.sector }}</span>
+          </div>
+          <h1 id="case-h" style="margin:auto 0 0;padding-top:5vh;font-size:clamp(60px,11.5vw,250px);line-height:.88;letter-spacing:-.045em;font-weight:500;text-transform:uppercase;">
+            <sc-for list="{{ cs.titleLines }}" as="ln" hint-placeholder-count="2"><span style="display:block;">{{ ln }}</span></sc-for>
+          </h1>
+          <sc-if value="{{ cs.hasTagline }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:4vh 0 0;max-width:22ch;font-size:clamp(20px,2.2vw,36px);line-height:1.15;letter-spacing:-.02em;font-weight:400;color:var(--pink2);text-wrap:pretty;">{{ cs.tagline }}</p>
+          </sc-if>
+          <div style="margin-top:auto;padding-top:6vh;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:clamp(16px,2.4vw,44px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.7;">
+            <div><div style="color:var(--pmute);margin-bottom:.8em;">Cliente</div><div>{{ cs.client }}</div></div>
+            <div><div style="color:var(--pmute);margin-bottom:.8em;">Ano</div><div style="font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;">{{ cs.year }}</div></div>
+            <div><div style="color:var(--pmute);margin-bottom:.8em;">Atuação</div><sc-for list="{{ cs.role }}" as="r" hint-placeholder-count="3"><div>{{ r }}</div></sc-for></div>
+            <div><div style="color:var(--pmute);margin-bottom:.8em;">Categoria</div><div>{{ cs.category }}</div></div>
+          </div>
+          <div style="display:flex;justify-content:center;padding-top:clamp(28px,5svh,56px);">
+            <a data-case-cue href="#case-media" onClick="{{ toMedia }}" aria-label="Rolar para ver o projeto" style="display:flex;flex-direction:column;align-items:center;gap:14px;color:var(--pink);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;white-space:nowrap;transition:opacity 200ms cubic-bezier(.16,1,.3,1);" style-hover="opacity:.6" style-focus="outline:1px solid var(--pink);outline-offset:6px;">
+              <span>Role para ver o projeto</span>
+              {{ scrollCue }}
+            </a>
+          </div>
+        </article>
+
+        <figure id="case-media" data-case-media style="position:relative;margin:0 clamp(16px,2.4vw,44px);height:min(100svh,max(56.25vw,60svh));overflow:hidden;background:color-mix(in oklab,var(--pink) 8%,var(--pbg));">
+        <sc-if value="{{ cs.heroM.isVideo }}" hint-placeholder-val="{{ false }}">
+          <video data-lazy-src="{{ cs.heroM.src }}" poster="{{ cs.heroM.poster }}" muted="{{ true }}" loop="{{ true }}" playsinline="true" preload="none" aria-label="{{ cs.heroM.alt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+        </sc-if>
+        <sc-if value="{{ cs.heroM.isImage }}" hint-placeholder-val="{{ true }}">
+          <img src="{{ cs.heroM.src }}" alt="{{ cs.heroM.alt }}" loading="eager" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </sc-if>
+        </figure>
+      </div>
+
+      <div style="padding:0 clamp(16px,2.4vw,44px);">
+        <sc-for list="{{ cs.blocks }}" as="b" hint-placeholder-count="4">
+
+          <sc-if value="{{ b.isText }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(16px,2.4vw,44px);padding:clamp(56px,8vw,150px) 0;">
+              <div style="flex:0 0 clamp(120px,calc(25% - 80px),340px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">{{ b.label }}</div>
+              <p style="flex:1 1 380px;max-width:620px;margin:0;font-size:clamp(17px,1.35vw,21px);line-height:1.45;letter-spacing:-.005em;color:var(--ink2);text-wrap:pretty;">{{ b.body }}</p>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ b.isTextPair }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(16px,2.4vw,44px);padding:clamp(56px,8vw,150px) 0;">
+              <div style="flex:0 0 clamp(120px,calc(25% - 80px),340px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">{{ b.a.label }}</div>
+              <p style="flex:1 1 300px;max-width:480px;margin:0;font-size:clamp(17px,1.35vw,21px);line-height:1.45;letter-spacing:-.005em;color:var(--ink2);text-wrap:pretty;">{{ b.a.body }}</p>
+              <div style="flex:1 1 300px;max-width:480px;">
+                <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);margin-bottom:1.2em;">{{ b.b.label }}</div>
+                <p style="margin:0;font-size:clamp(17px,1.35vw,21px);line-height:1.45;letter-spacing:-.005em;color:var(--ink2);text-wrap:pretty;">{{ b.b.body }}</p>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ b.isStatement }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0;padding:clamp(56px,8vw,150px) 0 clamp(56px,8vw,150px) clamp(0px,calc(25% - 80px),340px);font-size:clamp(32px,4.8vw,100px);line-height:1.02;letter-spacing:-.03em;font-weight:400;max-width:22ch;text-wrap:pretty;">{{ b.text }}</p>
+          </sc-if>
+
+          <sc-if value="{{ b.isFull }}" hint-placeholder-val="{{ false }}">
+            <figure style="margin:clamp(56px,8vw,150px) calc(-1 * clamp(16px,2.4vw,44px)) 0;background:var(--panel);">
+              <sc-if value="{{ b.one.isVideo }}" hint-placeholder-val="{{ false }}"><video data-lazy-src="{{ b.one.src }}" poster="{{ b.one.poster }}" muted="{{ true }}" loop="{{ true }}" playsinline="true" preload="none" aria-label="{{ b.one.alt }}" style="width:100%;height:auto;aspect-ratio:{{ b.one.ratio }};object-fit:cover;"></video></sc-if>
+              <sc-if value="{{ b.one.isImage }}" hint-placeholder-val="{{ true }}"><img src="{{ b.one.src }}" alt="{{ b.one.alt }}" loading="lazy" decoding="async" style="width:100%;height:auto;"></sc-if>
+              <sc-if value="{{ b.one.hasCaption }}" hint-placeholder-val="{{ false }}"><figcaption style="padding:12px clamp(16px,2.4vw,44px) 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">{{ b.one.caption }}</figcaption></sc-if>
+            </figure>
+          </sc-if>
+
+          <sc-if value="{{ b.isWide }}" hint-placeholder-val="{{ false }}">
+            <figure style="margin:clamp(56px,8vw,150px) 0 0;background:var(--panel);">
+              <sc-if value="{{ b.one.isVideo }}" hint-placeholder-val="{{ false }}"><video data-lazy-src="{{ b.one.src }}" poster="{{ b.one.poster }}" muted="{{ true }}" loop="{{ true }}" playsinline="true" preload="none" aria-label="{{ b.one.alt }}" style="width:100%;height:auto;aspect-ratio:{{ b.one.ratio }};object-fit:cover;"></video></sc-if>
+              <sc-if value="{{ b.one.isImage }}" hint-placeholder-val="{{ true }}"><img src="{{ b.one.src }}" alt="{{ b.one.alt }}" loading="lazy" decoding="async" style="width:100%;height:auto;"></sc-if>
+              <sc-if value="{{ b.one.hasCaption }}" hint-placeholder-val="{{ false }}"><figcaption style="padding:12px 0 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">{{ b.one.caption }}</figcaption></sc-if>
+            </figure>
+          </sc-if>
+
+          <sc-if value="{{ b.isSmall }}" hint-placeholder-val="{{ false }}">
+            <figure style="margin:clamp(56px,8vw,150px) auto 0;width:min(100%,max(280px,36vw),640px);">
+              <sc-if value="{{ b.one.isVideo }}" hint-placeholder-val="{{ false }}"><video data-lazy-src="{{ b.one.src }}" poster="{{ b.one.poster }}" muted="{{ true }}" loop="{{ true }}" playsinline="true" preload="none" aria-label="{{ b.one.alt }}" style="width:100%;height:auto;aspect-ratio:{{ b.one.ratio }};object-fit:cover;background:var(--panel);"></video></sc-if>
+              <sc-if value="{{ b.one.isImage }}" hint-placeholder-val="{{ true }}"><img src="{{ b.one.src }}" alt="{{ b.one.alt }}" loading="lazy" decoding="async" style="width:100%;height:auto;background:var(--panel);"></sc-if>
+              <sc-if value="{{ b.one.hasCaption }}" hint-placeholder-val="{{ false }}"><figcaption style="padding:12px 0 0;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">{{ b.one.caption }}</figcaption></sc-if>
+            </figure>
+          </sc-if>
+
+          <sc-if value="{{ b.isVertical }}" hint-placeholder-val="{{ false }}">
+            <figure style="margin:clamp(56px,8vw,150px) 0 0 auto;width:min(100%,max(320px,42vw));">
+              <sc-if value="{{ b.one.isVideo }}" hint-placeholder-val="{{ false }}"><video data-lazy-src="{{ b.one.src }}" poster="{{ b.one.poster }}" muted="{{ true }}" loop="{{ true }}" playsinline="true" preload="none" aria-label="{{ b.one.alt }}" style="width:100%;height:auto;aspect-ratio:{{ b.one.ratio }};object-fit:cover;background:var(--panel);"></video></sc-if>
+              <sc-if value="{{ b.one.isImage }}" hint-placeholder-val="{{ true }}"><img src="{{ b.one.src }}" alt="{{ b.one.alt }}" loading="lazy" decoding="async" style="width:100%;height:auto;background:var(--panel);"></sc-if>
+              <sc-if value="{{ b.one.hasCaption }}" hint-placeholder-val="{{ false }}"><figcaption style="padding:12px 0 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">{{ b.one.caption }}</figcaption></sc-if>
+            </figure>
+          </sc-if>
+
+          <sc-if value="{{ b.isPair }}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top:clamp(56px,8vw,150px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(16px,2.4vw,44px);align-items:end;">
+              <sc-for list="{{ b.items }}" as="m" hint-placeholder-count="2">
+                <figure style="margin:0;">
+                  <sc-if value="{{ m.isVideo }}" hint-placeholder-val="{{ false }}"><video data-lazy-src="{{ m.src }}" poster="{{ m.poster }}" muted="{{ true }}" loop="{{ true }}" playsinline="true" preload="none" aria-label="{{ m.alt }}" style="width:100%;height:auto;aspect-ratio:{{ m.ratio }};object-fit:cover;background:var(--panel);"></video></sc-if>
+                  <sc-if value="{{ m.isImage }}" hint-placeholder-val="{{ true }}"><img src="{{ m.src }}" alt="{{ m.alt }}" loading="lazy" decoding="async" style="width:100%;height:auto;background:var(--panel);"></sc-if>
+                  <sc-if value="{{ m.hasCaption }}" hint-placeholder-val="{{ false }}"><figcaption style="padding:12px 0 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">{{ m.caption }}</figcaption></sc-if>
+                </figure>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ b.isTextMedia }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(16px,2.4vw,44px);padding:clamp(56px,8vw,150px) 0 0;align-items:flex-start;">
+              <div style="flex:0 0 clamp(120px,calc(25% - 80px),340px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">{{ b.text.label }}</div>
+              <p style="flex:1 1 300px;max-width:480px;margin:0;font-size:clamp(17px,1.35vw,21px);line-height:1.45;letter-spacing:-.005em;color:var(--ink2);text-wrap:pretty;">{{ b.text.body }}</p>
+              <figure style="flex:1 1 320px;max-width:520px;margin:0 0 0 auto;">
+                <sc-if value="{{ b.one.isVideo }}" hint-placeholder-val="{{ false }}"><video data-lazy-src="{{ b.one.src }}" poster="{{ b.one.poster }}" muted="{{ true }}" loop="{{ true }}" playsinline="true" preload="none" aria-label="{{ b.one.alt }}" style="width:100%;height:auto;aspect-ratio:{{ b.one.ratio }};object-fit:cover;background:var(--panel);"></video></sc-if>
+                <sc-if value="{{ b.one.isImage }}" hint-placeholder-val="{{ true }}"><img src="{{ b.one.src }}" alt="{{ b.one.alt }}" loading="lazy" decoding="async" style="width:100%;height:auto;background:var(--panel);"></sc-if>
+                <sc-if value="{{ b.one.hasCaption }}" hint-placeholder-val="{{ false }}"><figcaption style="padding:12px 0 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;color:var(--mute);">{{ b.one.caption }}</figcaption></sc-if>
+              </figure>
+            </div>
+          </sc-if>
+
+        </sc-for>
+      </div>
+
+      <section aria-label="Créditos" style="margin:clamp(56px,8vw,150px) clamp(16px,2.4vw,44px) 0;padding-top:clamp(16px,2.4vw,44px);border-top:1px solid var(--line2);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:calc(clamp(16px,2.4vw,44px) * 1.2) clamp(16px,2.4vw,44px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.7;">
+        <sc-for list="{{ cs.credits }}" as="c" hint-placeholder-count="4">
+          <div><div style="color:var(--mute);margin-bottom:.6em;">{{ c.role }}</div><div>{{ c.name }}</div></div>
+        </sc-for>
+      </section>
+
+      <sc-if value="{{ hasNext }}" hint-placeholder-val="{{ true }}">
+        <a data-next href="{{ nx.href }}" onClick="{{ nx.open }}" onMouseEnter="{{ cursorOn }}" onMouseLeave="{{ cursorOff }}" aria-label="Próximo projeto: {{ nx.title }}" style="position:relative;display:flex;align-items:center;justify-content:center;height:100svh;margin-top:clamp(56px,8vw,150px);overflow:hidden;border-top:1px solid var(--line2);" style-focus="outline:1px solid var(--ink);outline-offset:-6px;">
+          <span style="position:absolute;top:calc(clamp(16px,2.4vw,44px) * 2);left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.6em;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;white-space:nowrap;"><span style="color:var(--mute);">Próximo projeto</span><sc-if value="{{ nx.hasTeaser }}" hint-placeholder-val="{{ false }}"><span>{{ nx.teaser }}</span></sc-if></span>
+          <span aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;white-space:nowrap;z-index:1;font-weight:500;letter-spacing:-.04em;line-height:1;text-transform:uppercase;"><span data-fit-title style="display:inline-block;">{{ nx.title }}</span></span>
+          <span style="position:relative;z-index:2;display:block;width:min(84vw,52.8svh);aspect-ratio:4/5;overflow:hidden;background:var(--panel);">
+            <img src="{{ nx.posterOrCover }}" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 900ms cubic-bezier(.16,1,.3,1);will-change:transform;" style-hover="transform:scale(1.03)">
+          </span>
+          <span style="position:absolute;left:clamp(16px,2.4vw,44px);right:clamp(16px,2.4vw,44px);bottom:clamp(16px,2.4vw,44px);z-index:3;display:flex;justify-content:space-between;align-items:flex-end;gap:clamp(16px,2.4vw,44px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.5;">
+            <span>{{ nx.category }}</span>
+            <span style="font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;color:var(--mute);">{{ nx.num }} / {{ count }} →</span>
+            <span style="font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;">{{ nx.year }}</span>
+          </span>
+        </a>
+      </sc-if>
+
+      <footer style="padding:calc(clamp(16px,2.4vw,44px) * 2) clamp(16px,2.4vw,44px) clamp(16px,2.4vw,44px);border-top:1px solid var(--line2);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:clamp(16px,2.4vw,44px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;line-height:1.7;">
+        <div><div>{{ siteName }}</div><div style="color:var(--mute);">{{ siteRole }}</div></div>
+        <div style="color:var(--mute);"><div>{{ siteCity }}</div><div>{{ siteCountry }}</div></div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;">
+          <a href="{{ instagramHref }}" target="_blank" rel="noreferrer" style-hover="color:var(--mute)">Instagram</a>
+          <a href="{{ linkedinHref }}" target="_blank" rel="noreferrer" style-hover="color:var(--mute)">LinkedIn</a>
+          <a href="{{ emailHref }}" style-hover="color:var(--mute)">E-mail</a>
+        </div>
+        <div style="color:var(--mute);text-align:right;font-family:'Geist Mono','SF Mono',ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.06em;">© {{ currentYear }}</div>
+      </footer>
+    </main>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;galleryMotion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;cinematic&quot;,&quot;options&quot;:[&quot;cinematic&quot;,&quot;minimal&quot;],&quot;tsType&quot;:&quot;'cinematic' | 'minimal'&quot;,&quot;section&quot;:&quot;Movimento&quot;},&quot;snap&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Movimento&quot;},&quot;drumTilt&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:60,&quot;min&quot;:40,&quot;max&quot;:110,&quot;step&quot;:1,&quot;unit&quot;:&quot;°&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Movimento&quot;},&quot;videoStart&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:50,&quot;min&quot;:0,&quot;max&quot;:90,&quot;step&quot;:5,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Vídeos de capa&quot;},&quot;titleBleed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:112,&quot;min&quot;:96,&quot;max&quot;:130,&quot;step&quot;:1,&quot;unit&quot;:&quot;vw&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Galeria&quot;}}">
+class Component extends DCLogic {
+  static U = {
+    clamp: (v, a, b) => Math.min(b, Math.max(a, v)),
+    lerp: (a, b, u) => a + (b - a) * u,
+    smooth: (x, a, b) => { const u = Math.min(1, Math.max(0, (x - a) / (b - a))); return u * u * (3 - 2 * u); },
+    easeInOut: u => (u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2),
+    easeOut: u => 1 - Math.pow(1 - u, 3),
+    expoOut: u => (u >= 1 ? 1 : 1 - Math.pow(2, -10 * u)),
+    pad: n => String(n).padStart(2, '0'),
+  };
+  // Dois modos de leitura: "brand" (Marcas, fundo preto) e "digital" (Produtos digitais, fundo claro).
+  static THEMES = {
+    brand: { bg: '#050a10', bgimg: 'radial-gradient(55% 45% at 12% 30%,rgba(22,128,214,.13),transparent 72%),radial-gradient(50% 40% at 88% 78%,rgba(22,128,214,.10),transparent 72%)', logo: 'none', ink: '#f4f3ef', ink2: '#dcdbd6', mute: '#8a8a86', panel: '#0b121b', line: 'rgba(244,243,239,.18)', line2: 'rgba(244,243,239,.14)', glow: 'drop-shadow(0 0 36px rgba(0,0,0,.7))' },
+    digital: { bg: '#f4f3ef', bgimg: 'none', logo: 'brightness(0)', ink: '#0a0a0a', ink2: '#3d3d3a', mute: '#6b6b67', panel: '#e7e6e1', line: 'rgba(10,10,10,.18)', line2: 'rgba(10,10,10,.14)', glow: 'drop-shadow(0 0 36px rgba(0,0,0,.22))' },
+  };
+  static hashFor(mode, slug) { return slug ? (mode === 'digital' ? '#/digital/' : '#/projetos/') + slug : (mode === 'digital' ? '#digital' : '#marcas'); }
+
+  state = { data: null, route: { name: 'home', slug: null }, mode: 'brand', entered: false, introPending: true, mobile: false, tr: null };
+  raf = 0; introStart = 0; homeScroll = 0; T = 1; vw = 1; vh = 1; boxH = 1; heroFs = 100; rows = {}; stack = []; heroLines = []; heroMeta = []; settled = true; idleT = 0; busy = false;
+
+  // ── lifecycle ──────────────────────────────────────────────
+  componentDidMount() {
+    this.root = document.querySelector('[data-portfolio-root]');
+    this.mqMobile = matchMedia('(max-width: 767px)');
+    this.mqRM = matchMedia('(prefers-reduced-motion: reduce)');
+    this.canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (this.mqMobile.matches) this.setState({ mobile: true });
+    this.onMQ = e => this.setState({ mobile: e.matches });
+    this.mqMobile.addEventListener('change', this.onMQ);
+    this.onScroll = () => { this.settled = false; this.requestFrame(); clearTimeout(this.idleT); this.idleT = setTimeout(() => this.onIdle(), 150); };
+    this.onResize = () => { this.measure(); this.fitTitles(); this.requestFrame(); };
+    document.addEventListener('scroll', this.onScroll, { passive: true, capture: true });
+    window.addEventListener('resize', this.onResize);
+    this.onPop = () => this.applyHash(false);
+    window.addEventListener('popstate', this.onPop);
+    window.addEventListener('hashchange', this.onPop);
+    this.onKey = e => { if (e.key === 'Escape' && this.state.route.name === 'case') this.goHome(); };
+    window.addEventListener('keydown', this.onKey);
+    if (this.canHover) {
+      this.onMove = e => { if (this.cursorEl) this.cursorEl.style.transform = `translate3d(${e.clientX}px,${e.clientY}px,0)`; };
+      window.addEventListener('mousemove', this.onMove, { passive: true });
+    }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { this.fitTitles(); this.measure(); this.requestFrame(); });
+    this._prev = this.state;
+    this.applyTheme();
+    if (this.state.data) {
+      // hot reload: state carried over, DOM already there
+      if (!this.state.introPending) this.introStart = performance.now() - 10000;
+      this.collect();
+      if (this.state.introPending) this.startIntro();
+    } else {
+      this.loadData();
+    }
+  }
+  componentWillUnmount() {
+    this.mqMobile.removeEventListener('change', this.onMQ);
+    document.removeEventListener('scroll', this.onScroll, { capture: true });
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('popstate', this.onPop);
+    window.removeEventListener('hashchange', this.onPop);
+    window.removeEventListener('keydown', this.onKey);
+    if (this.onMove) window.removeEventListener('mousemove', this.onMove);
+    if (this.io) this.io.disconnect();
+    clearTimeout(this.idleT);
+    cancelAnimationFrame(this.raf);
+  }
+  componentDidUpdate(prevProps) {
+    const prev = this._prev || {}; this._prev = this.state;
+    this.applyTheme();
+    if (prev.data !== this.state.data || prev.route !== this.state.route || prev.mode !== this.state.mode || prev.entered !== this.state.entered) {
+      this.collect();
+      if (!prev.data && this.state.data) { this.applyHash(true); this.startIntro(); }
+    } else if (prev.mobile !== this.state.mobile) {
+      this.toggle = this.root && this.root.querySelector('[data-mode-toggle]'); this._toggleOn = undefined; this._hdrKey = undefined;
+      this.measure(); this.fitTitles(); this.requestFrame();
+    }
+    if (prevProps && prevProps.titleBleed !== this.props.titleBleed) this.collect();
+    if (prevProps && prevProps.drumTilt !== this.props.drumTilt) this.requestFrame();
+    if (prevProps && prevProps.videoStart !== this.props.videoStart) this.reseekCovers();
+  }
+
+  async loadData() {
+    let m = null;
+    const url = 'projects.js?v=' + Date.now(); // sem cache: edições no projects.js aparecem no primeiro reload
+    try { m = await import(new URL(url, document.baseURI).href); } catch (e) { console.warn('import() indisponível, usando fetch:', String(e && e.message || e)); }
+    if (!m) {
+      try {
+        const src = await (await fetch(url, { cache: 'no-store' })).text();
+        m = new Function(src.replace(/^export\s+/gm, '') + '\nreturn { site, projects };')();
+      } catch (e) { console.error('Falha ao carregar projects.js: ' + String(e && e.message || e)); }
+    }
+    if (m) this.setState({ data: { site: m.site, projects: m.projects } });
+    else this.setState({ data: { site: {}, projects: [] }, introPending: false });
+  }
+
+  // ── theme ──────────────────────────────────────────────────
+  // As cores do template são variáveis (--bg, --ink…) definidas na raiz; aqui só trocamos os valores.
+  // A landing (hero) é sempre preta; o tema do modo vale dentro da galeria e nos cases.
+  applyTheme() {
+    const mode = (this.state.entered || this.state.route.name === 'case') ? this.state.mode : 'brand';
+    if (this._theme === mode && this._themeRoot === this.root) return;
+    this._theme = mode; this._themeRoot = this.root;
+    const th = Component.THEMES[mode] || Component.THEMES.brand;
+    if (this.root) Object.keys(th).forEach(k => this.root.style.setProperty('--' + k, th[k]));
+    document.documentElement.setAttribute('data-mode', mode);
+    document.documentElement.style.background = document.body.style.background = th.bg;
+    const meta = document.querySelector('meta[name="theme-color"]'); if (meta) meta.setAttribute('content', th.bg);
+  }
+
+  // ── DOM collection & measurement ──────────────────────────
+  collect() {
+    if (!this.root) return;
+    const q = s => Array.from(this.root.querySelectorAll(s));
+    this.cursorEl = this.root.querySelector('[data-cursor]');
+    this.cursorIn = this.root.querySelector('[data-cursor-in]');
+    this.exhibit = this.root.querySelector('[data-exhibit]');
+    this.stage = this.root.querySelector('[data-stage]');
+    this.heroText = this.root.querySelector('[data-hero-text]');
+    this.heroBg = this.root.querySelector('[data-hero-bg]');
+    this.logoTrack = this.root.querySelector('[data-logo-track]');
+    this.stack = q('[data-stack]').sort((a, b) => +a.dataset.stack - +b.dataset.stack);
+    this.heroLines = q('[data-hero-line]');
+    this.heroMeta = q('[data-hero-meta]');
+    this.toggle = this.root.querySelector('[data-mode-toggle]'); this._toggleOn = undefined;
+    this.header = this.root.querySelector('[data-header]'); this.caseHeroText = this.root.querySelector('[data-case-hero-text]'); this._hdrKey = undefined;
+    if (this.state.route.name === 'home' && !this.state.entered) this._t = 0;
+    this.rows = {};
+    const row = i => (this.rows[i] = this.rows[i] || {});
+    this.plane0 = this.root.querySelector('[data-plane="0"]');
+    q('[data-row-title]').forEach(el => { row(el.dataset.rowTitle).title = el; });
+    q('[data-row-media]').forEach(el => { row(el.dataset.rowMedia).media = el; });
+    q('[data-row-line]').forEach(el => { row(el.dataset.rowLine).line = el; });
+    q('[data-plane]').forEach(el => { row(el.dataset.plane).plane = el; });
+    q('[data-row]').forEach(el => { row(el.dataset.row).section = el; });
+    if (this.stage) { row(0).section = this.stage; row(0).media = this.stack[0] || null; }
+    this.measure();
+    this.fitTitles();
+    this.setupLazyVideos();
+    this.syncToggle();
+    this.requestFrame();
+  }
+  measure() {
+    if (!this.root) return;
+    this.vw = this.root.clientWidth || window.innerWidth;
+    this.vh = this.stage ? this.stage.offsetHeight : window.innerHeight;
+    if (this.exhibit && this.stage) this.T = Math.max(1, this.exhibit.offsetHeight - this.stage.offsetHeight);
+    if (this.stack[0]) this.boxH = this.stack[0].offsetHeight || 1;
+    if (this.heroText) this.heroFs = parseFloat(getComputedStyle(this.heroText).fontSize) || 100;
+  }
+  fitTitles() {
+    if (!this.root) return;
+    const bleed = (this.props.titleBleed ?? 112) / 100;
+    const vw = this.root.clientWidth || window.innerWidth;
+    const vh = this.vh > 1 ? this.vh : window.innerHeight;
+    this.root.querySelectorAll('[data-fit-title]').forEach(el => {
+      el.style.fontSize = '100px';
+      const w = el.offsetWidth || 1; // largura de layout: ignora o tambor 3D
+      const target = vw * (this.state.mobile ? 1.04 : bleed);
+      const fs = Math.max(56, Math.min(100 * target / w, vh * 0.5));
+      el.style.fontSize = fs.toFixed(1) + 'px';
+    });
+  }
+  setupLazyVideos() {
+    if (this.io) this.io.disconnect();
+    const vids = Array.from(this.root.querySelectorAll('video[data-lazy-src]'));
+    vids.forEach(v => {
+      if (v.hasAttribute('data-cover')) this.wireCover(v);
+      const cur = v.getAttribute('src');
+      if (cur && cur !== v.dataset.lazySrc) { v.__cv = undefined; v.removeAttribute('src'); v.load(); } // elemento reaproveitado para outro projeto (troca de modo)
+    });
+    if (!vids.length || typeof IntersectionObserver === 'undefined') return;
+    // Capas (data-cover) só são pré-carregadas aqui; play/pause delas acontece em frame(), pelo centro da tela.
+    this.io = new IntersectionObserver(entries => entries.forEach(en => {
+      const v = en.target, cover = v.hasAttribute('data-cover');
+      if (en.isIntersecting) {
+        if (!v.getAttribute('src')) { if (cover) v.preload = 'auto'; v.setAttribute('src', v.dataset.lazySrc); v.load(); }
+        if (!cover) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+      } else if (!cover && !v.paused) v.pause();
+    }), { rootMargin: '60% 0px 60% 0px', threshold: 0.01 });
+    vids.forEach(v => this.io.observe(v));
+  }
+  // Vídeo de capa: nasce no ponto em que o logo começa a se formar (coverStart do projeto, ou o tweak videoStart)
+  // e, ao terminar, volta sempre para esse ponto — nunca para o zero.
+  coverStartOf(v) {
+    const d = v.duration; if (!isFinite(d) || d <= 0) return 0;
+    const raw = parseFloat(v.dataset.start);
+    const s = isFinite(raw) ? (raw <= 1 ? d * raw : raw) : d * (this.props.videoStart ?? 50) / 100;
+    return Component.U.clamp(s, 0, Math.max(0, d - 0.2));
+  }
+  seekStart(v) { try { v.currentTime = this.coverStartOf(v); } catch (e) {} }
+  wireCover(v) {
+    if (v.__wired) return; v.__wired = true;
+    v.addEventListener('loadedmetadata', () => { if (v.__cv !== 'play') this.seekStart(v); }); // frame de repouso = início do logo
+    v.addEventListener('ended', () => { if (v.__cv === 'play') { this.seekStart(v); const p = v.play(); if (p && p.catch) p.catch(() => {}); } });
+  }
+  reseekCovers() { if (this.root) this.root.querySelectorAll('video[data-cover]').forEach(v => { if (v.__cv !== 'play' && v.readyState > 0) this.seekStart(v); }); }
+  reduceMotion() { return !!(this.mqRM && this.mqRM.matches); }
+
+  // ── intro ──────────────────────────────────────────────────
+  // Sem loader: aguarda fontes + retrato (teto de 700ms) e inicia a coreografia de entrada.
+  startIntro() {
+    if (this._introArmed) return;
+    this._introArmed = true;
+    const s = this.state.data && this.state.data.site;
+    const waits = [document.fonts && document.fonts.ready ? document.fonts.ready.catch(() => {}) : Promise.resolve()];
+    if (s && s.heroImage) waits.push(new Promise(res => { const im = new Image(); im.onload = im.onerror = res; im.src = s.heroImage; }));
+    let fired = false;
+    const go = () => {
+      if (fired) return; fired = true;
+      this.introStart = this.reduceMotion() ? performance.now() - 10000 : performance.now() + 120;
+      this.setState({ introPending: false });
+      this.measure(); this.fitTitles(); this.requestFrame();
+    };
+    Promise.all(waits).then(go, go);
+    setTimeout(go, 700);
+  }
+
+  // ── choreography ───────────────────────────────────────────
+  // Tambor 3D: cada linha é um plano que gira e se comprime em direção ao centro da tela.
+  // d = distância do centro da linha ao centro da viewport, em alturas de tela.
+  drum(d, mode) {
+    const U = Component.U, vh = this.vh, a = Math.min(Math.abs(d), 1);
+    const tOp = 1 - U.smooth(a, 0.22, 0.6), iOp = 1 - U.smooth(a, 0.5, 0.95), bl = U.smooth(a, 0.1, 0.6) * 8; // desfoque dos vizinhos, em px
+    if (mode === 'flat') return { ty: 0, tz: 0, rx: 0, br: 1, op: 1, tOp, iOp, bl };
+    if (mode === 'gentle') return { ty: -d * 0.04 * vh, tz: 0, rx: -d * 14, br: 1 - a * 0.3, op: 1, tOp, iOp, bl };
+    const A = (this.props.drumTilt ?? 60) * (this.state.mobile ? 0.8 : 1); // graus por altura de tela
+    // compressão: y visual = K·tanh(d/K). Menos inclinação → menos compressão, para o vizinho não invadir a linha do centro.
+    const K = U.clamp(0.68 + (75 - A) / 100, 0.5, 0.95);
+    const rx = -U.clamp(d * A, -80, 80);
+    const th = Math.abs(rx) * Math.PI / 180;
+    return {
+      ty: (K * Math.tanh(d / K) - d) * vh,
+      tz: -0.5 * vh * (1 - Math.cos(th)),
+      rx,
+      br: 1 - 0.4 * Math.min(Math.abs(d) / 0.9, 1),
+      op: 1 - U.smooth(Math.abs(d), 0.85, 1.15),
+      tOp, iOp, bl,
+    };
+  }
+  drumTransform(D) { return `translate3d(0, ${D.ty.toFixed(1)}px, ${D.tz.toFixed(1)}px) rotateX(${D.rx.toFixed(2)}deg)`; }
+  drumFilter(D, br) { return `brightness(${(br == null ? D.br : br).toFixed(3)})` + (D.bl > 0.05 ? ` blur(${D.bl.toFixed(1)}px)` : ''); }
+  // Snap (opcional, tweak "snap"): quando o scroll para dentro da galeria, centraliza o projeto mais próximo.
+  snapTargets() {
+    if (!this.exhibit || !this.stage) return [];
+    const vh = this.vh, list = [this.yOf(this.exhibit) + this.T];
+    Object.keys(this.rows).forEach(idx => { const r = this.rows[idx]; if (idx !== '0' && r.section) list.push(this.yOf(r.section) + r.section.offsetHeight / 2 - vh / 2); });
+    return list;
+  }
+  onIdle() {
+    const finish = () => { this.settled = true; this.requestFrame(); };
+    if (this.state.route.name !== 'home' || !this.exhibit || this.props.snap !== true) return finish();
+    const targets = this.snapTargets(); if (!targets.length) return finish();
+    const y = this.getScrollTop();
+    const zoneStart = targets[0] - 0.45 * this.T, zoneEnd = targets[targets.length - 1] + 0.45 * this.vh;
+    if (y < zoneStart || y > zoneEnd) return finish();
+    let best = targets[0]; targets.forEach(ty => { if (Math.abs(ty - y) < Math.abs(best - y)) best = ty; });
+    if (Math.abs(best - y) <= 1.5) return finish();
+    this.scrollToY(best, true);
+  }
+  // Capa: toca (a partir do início do logo) quando o card está perto do centro; ao se afastar, pausa e volta ao frame de repouso.
+  coverPlayback(card, on, off) {
+    const v = card && card.querySelector('video[data-cover]');
+    if (!v) return;
+    if (on && v.__cv !== 'play') {
+      v.__cv = 'play';
+      if (!v.getAttribute('src')) { v.preload = 'auto'; v.setAttribute('src', v.dataset.lazySrc); v.load(); }
+      const go = () => { if (v.__cv !== 'play') return; this.seekStart(v); const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      if (v.readyState >= 1) go(); else v.addEventListener('loadedmetadata', go, { once: true });
+    } else if (off && v.__cv !== 'stop') {
+      v.__cv = 'stop';
+      if (!v.paused) v.pause();
+      if (v.readyState > 0) this.seekStart(v);
+    }
+  }
+  // Seletor Marcas / Produtos digitais, fixo no topo: aparece quando o hero sai da tela; na galeria sem hero e nos cases fica sempre visível.
+  syncToggle(t) {
+    if (t !== undefined) this._t = t;
+    const el = this.toggle; if (!el) return;
+    const on = this.state.route.name === 'case' || this.state.entered || (this._t || 0) > 0.7;
+    if (on === this._toggleOn) return;
+    this._toggleOn = on;
+    el.style.opacity = on ? '1' : '0';
+    el.style.pointerEvents = on ? 'auto' : 'none';
+    el.style.transform = on ? 'translate(-50%, 0)' : 'translate(-50%, -10px)';
+    el.setAttribute('aria-hidden', on ? 'false' : 'true');
+  }
+  currentCase() {
+    const r = this.state.route; if (r.name !== 'case') return null;
+    const list = (this.state.mode === 'digital' ? this._digital : this._brand) || [];
+    return list.find(p => p.slug === r.slug) || null;
+  }
+  // Case: enquanto o topo (hero na cor do projeto) está sob o cabeçalho, o cabeçalho e o seletor usam a paleta do projeto; depois voltam ao blend.
+  caseFrame() {
+    this.syncToggle();
+    const cs = this.currentCase(), el = this.caseHeroText;
+    if (!cs || !el) { this.setHeaderOver(false); return; }
+    const lim = this.header ? this.header.offsetHeight * 0.7 : 48;
+    this.setHeaderOver(el.getBoundingClientRect().bottom > lim, cs);
+  }
+  setHeaderOver(on, cs) {
+    if (on && !cs) on = false;
+    const key = on ? cs.palBg + '|' + cs.palInk : '0';
+    if (this._hdrKey === key) return;
+    this._hdrKey = key; this._hdrOn = on;
+    const h = this.header, t = this.toggle;
+    if (h) { h.style.mixBlendMode = on ? 'normal' : 'difference'; h.style.setProperty('--hdr', on ? cs.palInk : '#f4f3ef'); }
+    if (t) {
+      if (on) { t.style.setProperty('--bg', cs.palBg); t.style.setProperty('--ink', cs.palInk); t.style.setProperty('--line', cs.palLine); }
+      else ['--bg', '--ink', '--line'].forEach(k => t.style.removeProperty(k));
+    }
+  }
+  requestFrame() { if (this.raf) return; this.raf = requestAnimationFrame(() => { this.raf = 0; this.frame(); }); }
+  frame() {
+    if (this.state.route.name === 'case') { this.caseFrame(); return; }
+    this.setHeaderOver(false);
+    if (!this.stage || !this.exhibit) return;
+    const U = Component.U;
+    const now = performance.now();
+    const rm = this.reduceMotion();
+    const introT = this.introStart ? (rm ? 99 : (now - this.introStart) / 1000) : -1;
+    const vh = this.vh;
+    const minimal = rm || this.props.galleryMotion === 'minimal';
+    const mode = rm ? 'flat' : (minimal ? 'gentle' : 'full');
+    const er = this.exhibit.getBoundingClientRect();
+    const dbgAttr = document.documentElement.getAttribute('data-dc-t');
+    const dbg = dbgAttr !== null && dbgAttr !== '';
+    const t = dbg ? parseFloat(dbgAttr) : (this.state.entered ? 1 : U.clamp(-er.top / this.T, 0, 1)); // sem hero, a galeria já começa aberta
+    this.syncToggle(t);
+    const sr = this.stage.getBoundingClientRect();
+    const d0 = dbg ? 0 : (sr.top + sr.height / 2 - vh / 2) / vh;
+    const D0 = this.drum(d0, mode);
+    const vis = (el, on) => { el.style.visibility = on ? 'visible' : 'hidden'; };
+    this.stage.style.perspectiveOrigin = `50% ${(vh / 2 - sr.top).toFixed(1)}px`;
+    if (this.plane0) this.plane0.style.transform = this.drumTransform(D0);
+
+    // Background portrait: fades in on load, recedes (scale up + fade) as the exhibition begins
+    const eb = introT < 0 ? 0 : U.expoOut(U.clamp(introT / 1.4, 0, 1));
+    const bgOut = U.smooth(t, 0.02, 0.55);
+    if (this.heroBg) {
+      const s = (rm ? 1 : 1.05 - 0.05 * eb) * (1 + (minimal ? 0.03 : 0.1) * U.easeOut(t));
+      this.heroBg.style.transform = `scale(${s.toFixed(4)})`;
+      this.heroBg.style.opacity = (eb * (1 - bgOut)).toFixed(3);
+      vis(this.heroBg, eb * (1 - bgOut) > 0.001);
+    }
+    // Carrossel de marcas (fim da página): só anima enquanto está na tela.
+    if (this.logoTrack) {
+      const br = this.logoTrack.parentElement.getBoundingClientRect();
+      const ps = (rm || br.bottom < 0 || br.top > vh) ? 'paused' : 'running';
+      if (this.logoTrack.style.animationPlayState !== ps) this.logoTrack.style.animationPlayState = ps;
+    }
+
+    // Project 01 cover emerges from the centre once the portrait lets go
+    this.stack.forEach(el => {
+      const u = U.easeInOut(U.smooth(t, 0.22, 0.9));
+      const op = U.smooth(t, 0.22, 0.5);
+      const ty = (1 - u) * 0.10 * vh;
+      const sc = U.lerp(0.58, 1, u);
+      el.style.transform = `translate(-50%, calc(-50% + ${ty.toFixed(1)}px)) scale(${sc.toFixed(4)})`;
+      el.style.opacity = op.toFixed(3);
+      el.style.filter = this.drumFilter(D0, U.lerp(0.7, 1, u) * D0.br);
+      el.style.pointerEvents = op < 0.5 ? 'none' : 'auto';
+      vis(el, op > 0.001);
+      this.coverPlayback(el, t > 0.9 && Math.abs(d0) < 0.3, op < 0.3 || Math.abs(d0) > 0.5);
+    });
+
+    this.heroLines.forEach((el, k) => {
+      const e = introT < 0 ? 0 : U.expoOut(U.clamp((introT - (0.5 + k * 0.1)) / 1.0, 0, 1));
+      const o = 1 - U.smooth(t, 0.04 + 0.05 * k, 0.36 + 0.05 * k);
+      const y = -U.easeOut(t) * 0.12 * vh + (1 - e) * 0.28 * this.heroFs;
+      el.style.transform = `translate3d(0, ${y.toFixed(1)}px, 0)`;
+      el.style.opacity = o.toFixed(3);
+      el.style.clipPath = rm ? 'none' : `inset(${U.lerp(108, -14, e).toFixed(2)}% -2% -12% -2%)`;
+      vis(el, o > 0.001);
+    });
+
+    const em = introT < 0 ? 0 : U.expoOut(U.clamp((introT - 0.25) / 0.8, 0, 1));
+    const mo = em * (1 - U.smooth(t, 0, 0.22));
+    this.heroMeta.forEach(el => { el.style.opacity = mo.toFixed(3); vis(el, mo > 0.001); el.style.pointerEvents = mo < 0.3 ? 'none' : ''; });
+
+    const r0 = this.rows[0];
+    if (r0 && r0.title) {
+      const s = U.smooth(t, 0.48, 0.86), o = s * D0.tOp;
+      r0.title.style.opacity = o.toFixed(3);
+      r0.title.style.transform = `translate3d(0, ${((1 - s) * 0.05 * vh).toFixed(1)}px, 0)`;
+      vis(r0.title, o > 0.001);
+    }
+    if (r0 && r0.line) r0.line.style.opacity = (U.smooth(t, 0.66, 0.95) * D0.iOp).toFixed(3);
+
+    Object.keys(this.rows).forEach(idx => {
+      if (idx === '0') return;
+      const r = this.rows[idx]; if (!r.section) return;
+      const rr = r.section.getBoundingClientRect();
+      const d = (rr.top + rr.height / 2 - vh / 2) / vh;
+      if (Math.abs(d) > 2.4) { if (r.plane && r.plane.style.opacity !== '0') r.plane.style.opacity = '0'; return; }
+      const D = this.drum(d, mode);
+      r.section.style.perspectiveOrigin = `50% ${(vh / 2 - rr.top).toFixed(1)}px`;
+      if (r.plane) { r.plane.style.transform = this.drumTransform(D); r.plane.style.opacity = D.op.toFixed(3); }
+      if (r.media) { r.media.style.filter = this.drumFilter(D); r.media.style.pointerEvents = D.op > 0.5 ? 'auto' : 'none'; this.coverPlayback(r.media, Math.abs(d) < 0.3, Math.abs(d) > 0.5); }
+      if (r.title) { r.title.style.opacity = D.tOp.toFixed(3); r.title.style.transform = `translate3d(0, ${(-d * 0.06 * vh).toFixed(1)}px, 0)`; vis(r.title, D.tOp > 0.001); }
+      if (r.line) r.line.style.opacity = D.iOp.toFixed(3);
+    });
+
+    if (this.introStart && introT < 2.4) this.requestFrame();
+  }
+
+  // ── scrolling & routing ────────────────────────────────────
+  getScroller() {
+    let el = this.root && this.root.parentElement;
+    while (el && el !== document.body && el !== document.documentElement) {
+      const cs = getComputedStyle(el);
+      if (/(auto|scroll)/.test(cs.overflowY) && el.scrollHeight > el.clientHeight + 1) return el;
+      el = el.parentElement;
+    }
+    return null;
+  }
+  getScrollTop() { const s = this.getScroller(); return s ? s.scrollTop : (window.scrollY || document.documentElement.scrollTop || 0); }
+  scrollToY(y, smooth) { const s = this.getScroller(); (s || window).scrollTo({ top: Math.max(0, y), behavior: smooth && !this.reduceMotion() ? 'smooth' : 'auto' }); }
+  yOf(el) { const s = this.getScroller(); const base = s ? s.getBoundingClientRect().top : 0; return el.getBoundingClientRect().top - base + this.getScrollTop(); }
+  scrollToSection(name, smooth) {
+    if (!this.root) return;
+    if (name === 'projetos' || name === 'marcas' || name === 'digital') { if (this.exhibit) this.scrollToY(this.yOf(this.exhibit) + this.T, smooth); return; }
+    const el = this.root.querySelector('#' + name);
+    if (el) this.scrollToY(this.yOf(el), smooth);
+  }
+  pushUrl(hash) { try { history.pushState(null, '', hash); } catch (e) { try { location.hash = hash; } catch (_) {} } }
+  // Rotas: #/projetos/<slug> (Marcas) · #/digital/<slug> (Produtos digitais) · #marcas / #digital (galeria no modo) · #sobre · #clientes · #contato
+  applyHash(initial) {
+    const d = this.state.data; if (!d) return;
+    const h = location.hash || '';
+    const m = h.match(/^#\/(projetos|digital)\/([\w-]+)/);
+    if (m) {
+      const mode = m[1] === 'digital' ? 'digital' : 'brand';
+      const p = d.projects.find(x => x.slug === m[2]);
+      if (p && (mode === 'brand' || p.digital)) {
+        if (this.state.route.slug !== m[2] || this.state.mode !== mode) {
+          this.setState({ mode, entered: true, route: { name: 'case', slug: m[2] } });
+          requestAnimationFrame(() => this.scrollToY(0, false));
+        }
+        return;
+      }
+    }
+    const fromCase = this.state.route.name !== 'home';
+    const patch = {};
+    if (h === '#digital' || h === '#marcas') { patch.mode = h === '#digital' ? 'digital' : 'brand'; patch.entered = true; }
+    else if (h === '' || h === '#') patch.entered = false; // landing: hero
+    if (fromCase) patch.route = { name: 'home', slug: null };
+    if (Object.keys(patch).length) this.setState(patch);
+    if (fromCase) requestAnimationFrame(() => this.scrollToY(patch.entered === false ? 0 : (this.homeScroll || 0), false));
+    else if (/^#(sobre|contato|clientes|projetos|marcas|digital)$/.test(h)) setTimeout(() => this.scrollToSection(h.slice(1), !initial), 80);
+    else if (patch.entered === false) requestAnimationFrame(() => this.scrollToY(0, false));
+  }
+  navigate(slug) {
+    this.pushUrl(slug ? Component.hashFor(this.state.mode, slug) : '#');
+    this.setState({ route: slug ? { name: 'case', slug } : { name: 'home', slug: null } });
+    requestAnimationFrame(() => { this.scrollToY(slug ? 0 : (this.homeScroll || 0), false); this.requestFrame(); });
+  }
+  openProject(e, p) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (this.state.tr) return;
+    this.cursorOff(e);
+    const el = e && e.currentTarget;
+    const rect = el && el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+    if (this.state.route.name === 'home') this.homeScroll = this.getScrollTop();
+    if (!rect || this.reduceMotion() || !p.posterOrCover) { this.navigate(p.slug); return; }
+    const tr = { src: p.posterOrCover, left: rect.left, top: rect.top, w: rect.width, h: rect.height, expanded: false, wipe: false };
+    this.setState({ tr });
+    requestAnimationFrame(() => requestAnimationFrame(() => this.setState({ tr: { ...tr, expanded: true } })));
+    setTimeout(() => { this.navigate(p.slug); this.setState({ tr: { ...tr, expanded: true, wipe: true } }); }, 720);
+    setTimeout(() => this.setState({ tr: null }), 720 + 680);
+  }
+  // Cortina: cobre a tela com a cor atual do fundo, troca a cena por baixo e revela.
+  transition(go) {
+    const veil = this.root && this.root.querySelector('[data-veil]');
+    if (!veil || this.reduceMotion()) { go(); return; }
+    if (this.busy) return;
+    this.busy = true;
+    const cs = this._hdrOn ? this.currentCase() : null;
+    veil.style.background = cs ? cs.palBg : getComputedStyle(this.root).backgroundColor;
+    veil.style.opacity = '1';
+    setTimeout(() => { go(); setTimeout(() => { veil.style.opacity = '0'; this.busy = false; }, 80); }, 420);
+  }
+  goHome = (e, section) => {
+    if (e && e.preventDefault) e.preventDefault();
+    if (this.state.route.name === 'home' && !section) { this.scrollToY(this.homeScroll || 0, true); return; }
+    this.transition(() => {
+      this.pushUrl(section ? '#' + section : Component.hashFor(this.state.mode));
+      this.setState({ route: { name: 'home', slug: null } });
+      requestAnimationFrame(() => {
+        if (section) this.scrollToSection(section, false); else this.scrollToY(this.homeScroll || 0, false);
+        this.requestFrame();
+      });
+    });
+  };
+  // Troca de modo (seletor do topo): entra na galeria do modo, sem hero, começando pelo primeiro projeto. Num case com versão digital, fica no mesmo projeto.
+  setMode(mode, e) {
+    if (e && e.preventDefault) e.preventDefault();
+    const d = this.state.data; if (!d || this.busy) return;
+    const r = this.state.route;
+    const cur = r.name === 'case' ? d.projects.find(x => x.slug === r.slug) : null;
+    if (this.state.mode === mode) { if (!cur && !this.state.entered) this.scrollToSection('projetos', true); return; } // já está no modo
+    const stay = !!(cur && (mode === 'brand' || cur.digital));
+    this.cursorOff(e);
+    this.transition(() => {
+      this.setState({ mode, entered: true, route: stay ? r : { name: 'home', slug: null } });
+      this.pushUrl(Component.hashFor(mode, stay ? cur.slug : null));
+      requestAnimationFrame(() => { this.scrollToY(0, false); this.requestFrame(); });
+    });
+  }
+  // Clique no nome: volta à landing (hero), sempre no tema preto.
+  goLanding = e => {
+    if (e && e.preventDefault) e.preventDefault();
+    if (this.state.route.name === 'home' && !this.state.entered) { this.scrollToY(0, true); this.pushUrl('#'); return; }
+    this.transition(() => {
+      this.pushUrl('#');
+      this.setState({ route: { name: 'home', slug: null }, entered: false });
+      requestAnimationFrame(() => { this.scrollToY(0, false); this.requestFrame(); });
+    });
+  };
+  // Chamada de rolagem do hero do case: leva até a imagem principal.
+  toMedia = e => {
+    if (e && e.preventDefault) e.preventDefault();
+    const f = this.root && this.root.querySelector('[data-case-media]');
+    if (f) this.scrollToY(this.yOf(f), true);
+  };
+  cue() {
+    if (this._cue) return this._cue;
+    const rm = this.mqRM ? this.mqRM.matches : false;
+    const el = React.createElement('span', { 'aria-hidden': 'true', style: { position: 'relative', display: 'block', width: '1px', height: '56px', background: 'var(--pline)', overflow: 'hidden' } },
+      React.createElement('span', { style: { position: 'absolute', left: 0, top: 0, width: '1px', height: '22px', background: 'currentColor', animation: rm ? 'none' : 'caseCue 1.9s cubic-bezier(.65,0,.35,1) infinite' } }));
+    if (this.mqRM) this._cue = el;
+    return el;
+  }
+  // Lista dobrada: o trilho anda -50% e volta ao início sem emenda. `scale` compensa a proporção de cada logo (símbolos maiores, wordmarks largos menores).
+  logoLoop(src) {
+    if (this._logoSrc === src && this._logoLoop) return this._logoLoop;
+    const B = 'clamp(34px,4.2vw,68px)';
+    const l = (src || []).map(x => ({ name: x.name || '', src: x.src || '', text: x.text || x.name || '', isImg: !!x.src, isText: !x.src, h: `calc(${B} * ${x.scale || 1})`, fs: `calc(${B} * ${(x.scale || 1) * 0.78})` }));
+    this._logoSrc = src; this._logoLoop = l.concat(l); return this._logoLoop;
+  }
+  setBrand = e => this.setMode('brand', e);
+  setDigital = e => this.setMode('digital', e);
+  onNav = e => {
+    const name = e.currentTarget.dataset.nav;
+    e.preventDefault();
+    if (this.state.route.name !== 'home') { this.goHome(null, name); return; }
+    this.scrollToSection(name, true);
+    this.pushUrl('#' + name);
+  };
+  cursorOn = e => {
+    if (!this.canHover || !this.cursorIn) return;
+    if (e && e.currentTarget) e.currentTarget.style.cursor = 'none';
+    this.cursorIn.style.opacity = '1'; this.cursorIn.style.transform = 'scale(1)';
+  };
+  cursorOff = e => {
+    if (!this.cursorIn) return;
+    if (e && e.currentTarget && e.currentTarget.style) e.currentTarget.style.cursor = '';
+    this.cursorIn.style.opacity = '0'; this.cursorIn.style.transform = 'scale(.4)';
+  };
+
+  // ── data normalisation ─────────────────────────────────────
+  normMedia(m) {
+    if (!m) return null;
+    const isVideo = m.mediaType === 'video';
+    return { ...m, isVideo, isImage: !isVideo, poster: m.poster || '', ratio: m.ratio || '16 / 9', hasCaption: !!m.caption, alt: m.alt || '', caption: m.caption || '' };
+  }
+  normBlock(b) {
+    const items = (b.items || []).map(m => this.normMedia(m));
+    const media = b.kind === 'media', L = b.layout || 'wide';
+    return { ...b, items, one: items[0] || {}, text: b.text || {}, a: b.a || {}, b: b.b || {},
+      isText: b.kind === 'text', isTextPair: b.kind === 'textPair', isStatement: b.kind === 'statement',
+      isFull: media && L === 'full', isWide: media && L === 'wide', isSmall: media && L === 'small',
+      isVertical: media && L === 'vertical', isPair: media && L === 'pair', isTextMedia: media && L === 'textMedia' };
+  }
+  // No modo digital, o objeto `digital` do projeto sobrescreve os campos da versão de marca.
+  normProject(p, i, mode) {
+    const dig = mode === 'digital';
+    const src = dig ? { ...p, ...(p.digital || {}) } : p;
+    const isVideo = src.mediaType === 'video';
+    const th = Component.THEMES[mode] || Component.THEMES.brand, pal = src.palette || {}, pbg = pal.bg || th.bg, pink = pal.ink || th.ink;
+    const n = { ...src, idx: i, mode, num: Component.U.pad(i + 1), href: Component.hashFor(mode, p.slug), isVideo, isImage: !isVideo,
+      palBg: pbg, palInk: pink, palInk2: `color-mix(in oklab, ${pink} 88%, ${pbg})`, palMute: pal.mute || `color-mix(in oklab, ${pink} 70%, ${pbg})`, palLine: `color-mix(in oklab, ${pink} 25%, transparent)`,
+      poster: src.poster || '', posterOrCover: isVideo ? (src.poster || '') : src.cover, coverAlt: src.coverAlt || src.title, coverStart: src.coverStart ?? '',
+      aria: 'Ver projeto ' + src.title, titleLines: src.titleLines || [src.title], role: src.role || [],
+      line: src.tagline || src.category || '', tagline: src.tagline || '', hasTagline: !!src.tagline, sector: src.sector || '', hasSector: !!src.sector, teaser: src.teaser || '', hasTeaser: !!src.teaser,
+      heroM: this.normMedia(src.hero) || {}, blocks: (src.blocks || []).map(b => this.normBlock(b)),
+      credits: (src.credits || []).filter(c => c && c.name) };
+    n.open = e => this.openProject(e, n);
+    return n;
+  }
+  renderVals() {
+    const d = this.state.data, s = (d && d.site) || {};
+    if (d && this._normSrc !== d) {
+      const all = d.projects || [];
+      this._brand = all.map((p, i) => this.normProject(p, i, 'brand'));
+      this._digital = all.filter(p => p.digital).map((p, i) => this.normProject(p, i, 'digital'));
+      this._normSrc = d;
+    }
+    const digital = this.state.mode === 'digital';
+    const projects = (digital ? this._digital : this._brand) || [];
+    const route = this.state.route;
+    const cs = route.name === 'case' ? projects.find(p => p.slug === route.slug) : null;
+    const nx = cs && projects.length > 1 ? projects[(cs.idx + 1) % projects.length] : null;
+    const tr = this.state.tr;
+    const px = v => v.toFixed(1) + 'px';
+    const about = s.about || {};
+    return {
+      isHome: !cs, isCase: !!cs,
+      mobile: this.state.mobile, notMobile: !this.state.mobile,
+      showHero: !this.state.entered, showHeroBg: !this.state.entered && !!s.heroImage, exhibitH: this.state.entered ? '100svh' : '220svh',
+      isBrand: !digital, isDigital: digital,
+      brandFg: digital ? 'var(--ink)' : 'var(--bg)', brandBg: digital ? 'transparent' : 'var(--ink)',
+      digitalFg: digital ? 'var(--bg)' : 'var(--ink)', digitalBg: digital ? 'var(--ink)' : 'transparent',
+      setBrand: this.setBrand, setDigital: this.setDigital, goLanding: this.goLanding,
+      siteName: s.name || 'Thiago Araujo', siteRole: s.role || 'Diretor Criativo', siteLocation: s.location || 'São Paulo, Brasil',
+      siteCity: s.city || 'São Paulo', siteCountry: s.country || 'Brasil', bio: s.bio || '',
+      experiencia: about.experiencia || [], reconhecimentos: about.reconhecimentos || [], clientes: about.clientes || [], expertise: about.expertise || [],
+      emailHref: s.email ? 'mailto:' + s.email : '#contato', linkedinHref: s.linkedin || '#contato', instagramHref: s.instagram || '#contato',
+      heroBg: s.heroImage || '', heroBgAlt: s.heroAlt || '', hasHeroBg: !!s.heroImage,
+      logoLoop: this.logoLoop(s.logos),
+      stack: projects.slice(0, 1), rows: projects.slice(1), first: projects[0] || { title: '', category: '', line: '', num: '', year: '' }, count: Component.U.pad(projects.length),
+      cs: cs || {}, nx: nx || {}, hasNext: !!nx,
+      hasTransition: !!tr, trSrc: tr ? tr.src : '',
+      trLeft: tr ? (tr.expanded ? '0px' : px(tr.left)) : '0px', trTop: tr ? (tr.expanded ? '0px' : px(tr.top)) : '0px',
+      trW: tr ? (tr.expanded ? '100%' : px(tr.w)) : '0px', trH: tr ? (tr.expanded ? '100%' : px(tr.h)) : '0px',
+      trClip: tr && tr.wipe ? 'inset(100% 0 0 0)' : 'inset(0 0 0 0)',
+      currentYear: new Date().getFullYear(),
+      onNav: this.onNav, goHome: this.goHome, cursorOn: this.cursorOn, cursorOff: this.cursorOff,
+      backHref: Component.hashFor(this.state.mode), toMedia: this.toMedia, scrollCue: this.cue(),
+    };
+  }
+}
+</script>
+</body>
+</html>
